@@ -1,4 +1,4 @@
-<div>
-  app-theatre-list
+<div style="height: calc(100% - 60px);overflow: scroll; display: flex; flex-direction: column;" >
+  <entity-card *ngFor="let cinema of (facade.currentTheatreList | async)!" [item]="cinema" style="margin-top: 1rem"></entity-card>
 </div>
-<p-paginator styleClass="to-bottom full-width"  [totalRecords]="(facade.totalTheatres | async)!" [rows]="20" [rowsPerPageOptions]="[1, 5, 20, 50, 100]"></p-paginator>
+<p-paginator class="to-bottom full-width" style="z-index:100" (onPageChange)="pageChanged($event)" [totalRecords]="(facade.totalTheatres | async)!" [rows]="5" [rowsPerPageOptions]="[1, 5, 20, 50, 100]"></p-paginator>

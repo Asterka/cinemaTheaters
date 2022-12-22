@@ -19,8 +19,14 @@ export class TheatreListComponent implements OnInit, IListWithLoader {
 
   initialize(){
     this.facade.requestTheatreNumber();
+    this.facade.requestTheatreList(0, 5);
   }
 
   loadData(): void {
+    throw new Error('Method not implemented.');
+  }
+
+  pageChanged(event: {page: number, first: number, rows: number}){
+    this.facade.requestTheatreList(event.page, event.rows);
   }
 }

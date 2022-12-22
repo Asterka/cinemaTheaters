@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 export class TheatreFacadeService {
 
   totalTheatres: BehaviorSubject<number> = new BehaviorSubject(0);
+  currentTheatreList: BehaviorSubject<any> = new BehaviorSubject([]);
 
   constructor(private network: NetworkLayerService) { }
 
@@ -14,6 +15,16 @@ export class TheatreFacadeService {
     this.network.getEntityNumber(environment.THEATRE_URL).subscribe({next: number => {
       this.totalTheatres.next(number);
     }})
+  }
+
+  requestTheatreList(page: number, offset: number) {
+    this.network
+      .getEntityList(environment.THEATRE_URL, page, undefined, offset)
+      .subscribe({ next: (cinemas) => {
+        console.log(cinemas);
+        this.currentTheatreList.next(cinemas);
+      }
+    });
   }
 
 }

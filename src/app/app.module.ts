@@ -9,7 +9,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NetworkLayerService } from 'src/shared/services/network-layer.service';
 import { HttpClientModule } from '@angular/common/http';
 import {PaginatorModule} from 'primeng/paginator';
-import { CinemaCardComponent } from './main-page/cinema-list/cinema-card/cinema-card.component';
+import { ItemCardComponent } from './main-page/card/entity-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { CinemaCardComponent } from './main-page/cinema-list/cinema-card/cinema-
     TheatreListComponent,
     CinemaListComponent,
     MainPageComponent,
-    CinemaCardComponent
+    ItemCardComponent
   ],
   imports: [
     HttpClientModule,

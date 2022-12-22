@@ -1,4 +1,4 @@
-export interface ICinema {
+export interface IEntity {
   Cells?: {
     CommonName?: string
   }

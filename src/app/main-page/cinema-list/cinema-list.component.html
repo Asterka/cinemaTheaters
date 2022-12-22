@@ -1,4 +1,4 @@
 <div style="height: calc(100% - 60px);overflow: scroll; display: flex; flex-direction: column;" >
-  <app-cinema-card *ngFor="let cinema of (facade.currentCinemaList | async)!" [cinema]="cinema" style="margin-top: 1rem"></app-cinema-card>
+  <entity-card *ngFor="let cinema of (facade.currentCinemaList | async)!" [item]="cinema" style="margin-top: 1rem"></entity-card>
 </div>
 <p-paginator class="to-bottom full-width" style="z-index:100" (onPageChange)="pageChanged($event)" [totalRecords]="(facade.totalCinemas | async)!" [rows]="5" [rowsPerPageOptions]="[1, 5, 20, 50, 100]"></p-paginator>
