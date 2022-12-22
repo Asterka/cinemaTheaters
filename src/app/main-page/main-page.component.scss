@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+  .main-page {
+    flex-direction: column;
+  }
+}
+
+.main-page{
+  flex: 1;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__list-section{
+    flex: 1;
+    background-color: antiquewhite;
+  }
+}
+
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
