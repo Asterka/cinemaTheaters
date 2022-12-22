@@ -1,17 +1,23 @@
 @media screen and (max-width: 768px) {
   .main-page {
     flex-direction: column;
+
+    &__list-section{
+      max-height: 50vh;
+    }
   }
 }
 
 .main-page{
   flex: 1;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0 2rem;
   gap: 1rem;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 
   &__list-section{
+    max-height: 50vh;
     flex: 1;
     background-color: antiquewhite;
     position: relative;

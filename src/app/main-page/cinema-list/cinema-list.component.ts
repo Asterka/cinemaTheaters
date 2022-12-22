@@ -20,10 +20,15 @@ export class CinemaListComponent implements OnInit, IListWithLoader {
 
   initialize(){
     this.facade.requestCinemaNumber();
+    this.facade.requestCinemaList(0, 5);
   }
 
   loadData(): void {
     throw new Error('Method not implemented.');
+  }
+
+  pageChanged(event: {page: number, first: number, rows: number}){
+    this.facade.requestCinemaList(event.page, event.rows);
   }
 
 }
