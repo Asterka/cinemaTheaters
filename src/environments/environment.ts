@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  API_KEY: 'nothing top secret here'
+  API_KEY: 'nothing top secret here',
+  CINEMA_URL: 'https://apidata.mos.ru/v1/datasets/495',
+  THEATRE_URL: 'https://apidata.mos.ru/v1/datasets/531'
 };
 
 /*

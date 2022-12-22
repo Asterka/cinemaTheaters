@@ -1,1 +1,2 @@
 <p>cinema-list works!</p>
+<p-paginator styleClass="to-bottom full-width" [totalRecords]="(facade.totalCinemas | async)!" [rows]="20" [rowsPerPageOptions]="[1, 5, 20, 50, 100]"></p-paginator>
